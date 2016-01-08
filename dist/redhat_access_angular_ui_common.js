@@ -1,5 +1,5 @@
-/*! redhat_access_angular_ui_common - v1.1.4 - 2015-12-15
- * Copyright (c) 2015 ;
+/*! redhat_access_angular_ui_common - v1.1.5 - 2016-01-08
+ * Copyright (c) 2016 ;
  * Licensed 
  */
 angular.module('gettext').run(['gettextCatalog', function (gettextCatalog) {
@@ -1987,6 +1987,9 @@ angular.module('RedhatAccess.common').factory('udsService', [
                    return uds.removeUserRole(userId,
                         query
                     );
+                },
+                postRoleLevel: function(userId,roleName,roleLevel){
+                    return uds.postRoleLevel(userId,roleName,roleLevel);
                 },
                 user: {
                     put: function(userId, uql, data){

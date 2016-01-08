@@ -186,6 +186,9 @@ angular.module('RedhatAccess.common').factory('udsService', [
                         query
                     );
                 },
+                postRoleLevel: function(userId,roleName,roleLevel){
+                    return uds.postRoleLevel(userId,roleName,roleLevel);
+                },
                 user: {
                     put: function(userId, uql, data){
                         return uds.postAddUsersToRole(
